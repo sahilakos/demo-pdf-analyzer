@@ -176,7 +176,7 @@ def main():
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <h1 style="display: inline-block; flex:1">Caliber Analyze</h1>
+        <h1 style="display: inline-block; flex:1">Caliber AI Analyze</h1>
         <sup style="margin-left:5px;font-size:small; color: green;">beta</sup>
     </div>
     """,
