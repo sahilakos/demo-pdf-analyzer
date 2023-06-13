@@ -168,7 +168,7 @@ def main():
         """,
         unsafe_allow_html=True,
     )
-    st.sidebar.image("img/logo1.png")
+    st.sidebar.image("img/akos-logo.png")
 
 
    
@@ -176,7 +176,7 @@ def main():
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <h1 style="display: inline-block;">PDF Analyzer</h1>
+        <h1 style="display: inline-block;">Caliber Analyze</h1>
         <sup style="margin-left:5px;font-size:small; color: green;">beta</sup>
     </div>
     """,
