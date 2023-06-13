@@ -172,11 +172,10 @@ def main():
 
 
    
-
+    st.image("img/caliber-logo.png", width=300)
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <img src="img/caliber-logo.png" style="flex:1"/>
         <h1 style="display: inline-block; flex:1">Caliber Analyze</h1>
         <sup style="margin-left:5px;font-size:small; color: green;">beta</sup>
     </div>
@@ -200,8 +199,7 @@ def main():
 
     # Use RecursiveCharacterTextSplitter as the default and only text splitter
     splitter_type = "RecursiveCharacterTextSplitter"
-
-    if 'openai_api_key' not in st.session_state:
+    if 'openai_api_key' not in st.secrets:
         openai_api_key = st.text_input(
             'Please enter your OpenAI API key or [get one here](https://platform.openai.com/account/api-keys)', value="", placeholder="Enter the OpenAI API key which begins with sk-")
         if openai_api_key:
@@ -213,7 +211,8 @@ def main():
             #st.markdown(warning_html, unsafe_allow_html=True)
             return
     else:
-        os.environ["OPENAI_API_KEY"] = st.session_state.openai_api_key
+        os.environ["OPENAI_API_KEY"] = st.secrets['openai_api_key']
+
 
     uploaded_files = st.file_uploader("Upload a PDF or TXT Document", type=[
                                       "pdf", "txt"], accept_multiple_files=True)
