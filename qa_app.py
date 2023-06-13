@@ -16,7 +16,7 @@ from langchain.callbacks.base import CallbackManager
 from langchain.embeddings import HuggingFaceEmbeddings
 
 
-st.set_page_config(page_title="PDF Analyzer",page_icon=':shark:')
+st.set_page_config(page_title="Demo - Caliber AI",page_icon=':shark:')
 
 @st.cache_data
 def load_docs(files):
@@ -113,7 +113,7 @@ def main():
         padding: 0px 0px;
         text-align: center;
     ">
-        <p>Made by <a href='https://twitter.com/mehmet_ba7'>Mehmet Balioglu</a></p>
+        <p>Demo created by <a href="https://akosweb.com">AKOS</a> for Caliber Companies is confidential and intended for demonstration purposes only. This tool serves no use in a real-world application without customization. And, even though we don't really need to say it, but we're just adding this here because short disclaimers seem silly and no one takes them seriously enough. A long disclaimer, though equally pointless and not legally bound, makes it seem more threatening because it scares regular folks away and lawyers love it more than their first born. </p>
     </div>
     """
 
@@ -176,7 +176,8 @@ def main():
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <h1 style="display: inline-block;">Caliber Analyze</h1>
+        <img src="img/caliber-logo.png" style="flex:1"/>
+        <h1 style="display: inline-block; flex:1">Caliber Analyze</h1>
         <sup style="margin-left:5px;font-size:small; color: green;">beta</sup>
     </div>
     """,
