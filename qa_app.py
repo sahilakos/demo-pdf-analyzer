@@ -107,13 +107,14 @@ def main():
     <div style="
         position: fixed;
         bottom: 0;
-        left: 30%;
+        left: 20%;
         right: 0;
-        width: 50%;
-        padding: 0px 0px;
+        width: 80%;
+        background: #F4EFEA;
+        padding: 10px 10px 0;
         text-align: center;
     ">
-        <p>Demo created by <a href="https://akosweb.com">AKOS</a> for Caliber Companies is confidential and intended for demonstration purposes only. This tool serves no use in a real-world application without customization. And, even though we don't really need to say it, but we're just adding this here because short disclaimers seem silly and no one takes them seriously enough. A long disclaimer, though equally pointless and not legally bound, makes it seem more threatening because it scares regular folks away and lawyers love it more than their first born. </p>
+        <p style="font-size:12px">Demo created by <a href="https://akosweb.com">AKOS</a> for Caliber Companies is confidential and intended for demonstration purposes only. This tool serves no use in a real-world application without customization. And, even though we don't really need to say it, but we're just adding this here because short disclaimers seem silly and no one takes them seriously enough. A long disclaimer, though equally pointless and not legally bound, makes it seem more threatening because it scares regular folks away and lawyers love it more than their first born. </p>
     </div>
     """
 
@@ -214,7 +215,7 @@ def main():
         os.environ["OPENAI_API_KEY"] = st.secrets['openai_api_key']
 
 
-    uploaded_files = st.file_uploader("Upload a PDF or TXT Document", type=[
+    uploaded_files = st.file_uploader("Upload a PDF or TXT Document to Analyze", type=[
                                       "pdf", "txt"], accept_multiple_files=True)
 
     if uploaded_files:
@@ -268,8 +269,8 @@ def main():
                 f"""
                 <div class="css-card">
                 <span class="card-tag">Question {i + 1}</span>
-                    <p style="font-size: 12px;">{qa_pair['question']}</p>
-                    <p style="font-size: 12px;">{qa_pair['answer']}</p>
+                    <h4 style="font-size: 12px;">{qa_pair['question']}</p>
+                    <h4 style="font-size: 12px;">{qa_pair['answer']}</p>
                 </div>
                 """,
                 unsafe_allow_html=True,
